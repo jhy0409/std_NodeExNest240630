@@ -1,33 +1,26 @@
-let headerContainer = document.getElementById("header-container");
-headerContainer.textContent = 'Text Content';
-headerContainer.innerText = 'Inner Text';
-headerContainer.innerHTML = '<span>Inner HTML</span>';
+// window.onload = function() {
+//     // 문서 load될 때 이 함수를 실행
+//     let text = document.getElementById('text');
 
-const items = document.getElementsByClassName( 'list-group-item');
-console.log(items);
-items[0].style.color = 'blue';
-items[8].textContent = 'Hi';
+//     text.innerText = 'html loaded'
+// }
 
-let lists = document.getElementsByTagName('li');
-// console.log(lists);
-// lists.torEach((list) => {
-//     list
+// const aElement = document.querySelector('a');
+// aElement.addEventListener('click', () => {
+//     alert('a element clicked');
 // });
 
-lists = Array.from(lists);
-console.log (lists);
-lists.forEach()
+const btnElement = document.querySelector('.btn2');
+btnElement.addEventListener('click', (event) => {
+    let val;
+    val = event.target;
+    val = event.target.id;
+    val = event.target.className;
+    val = event.target.classList;
 
-lists.forEach((list, index) => {
-    list.textContent = `${index}. List`;
-});    
+    val = event.type;
+    val = event.clientY; // 윈도우로부터 거리좌표
+    val = event.offsetY; // 요소로부터 거리좌표
 
-// const liOdd = document.querySelectorAll('li:nth-child(odd)');
-// const liOdd = document.querySelectorAll('li:nth-child(2n+1)');
-const liOdd = document.querySelectorAll('li:nth-child(odd)');
-
-
-liOdd.forEach((li, index) => {
-    li.style.backgroundColor = '!red';
-    li.textContent = `${index}. List`;
+    console.log(val);
 });
